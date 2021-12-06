@@ -1,0 +1,137 @@
+:root {
+  --green: #00b894;
+  --yellow: #ffd166;
+  --red: #ef476f;
+}
+
+@font-face {
+  font-family: 'Cairo';
+  src: url('../fonts/Cairo.ttf');
+}
+
+body {
+  font-family: 'Cairo', sans-serif;
+  background: url('../images/bg.png');
+}
+
+table {
+  font-size: 14px;
+}
+
+.btn {
+  font-weight: bold;
+  i {
+    font-weight: bold;
+  }
+}
+
+.text-success {
+  color: var(--green) !important;
+}
+.bg-success {
+  background-color: var(--green) !important;
+}
+.btn-success , button.dt-button {
+  background-color: var(--green) !important;
+  border-color: var(--green) !important;
+  color: #fff;
+}
+
+.text-warning {
+  color: var(--yellow) !important;
+}
+.bg-warning {
+  background-color: var(--yellow) !important;
+}
+.btn-warning {
+  background-color: var(--yellow) !important;
+  border-color: var(--yellow) !important;
+}
+
+.text-danger {
+  color: var(--red) !important;
+}
+.bg-danger {
+  background-color: var(--red) !important;
+}
+.btn-danger {
+  background-color: var(--red) !important;
+  border-color: var(--red) !important;
+}
+
+// Navbar
+.navbar-brand {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+@media screen and (max-width: 768px) {
+  .navbar-brand {
+    position: relative;
+    left: unset;
+    transform: translateX(0%);
+  } 
+}
+// Table
+.table {
+  tr {
+    td,th {
+      white-space: nowrap;
+    }
+  }
+}
+
+.table>:not(:first-child) { 
+  border-top: 2px solid var(--green);
+}
+
+// Linear Icons
+.lnr-40 {
+  font-size: 30px;
+}
+
+// Data tables
+.page-link {
+  color: var(--green) !important;
+}
+
+.page-item.active .page-link {
+  background-color: var(--green) !important;
+  border-color: var(--green) !important;
+  color: #fff !important;
+}
+
+
+.dataTables_wrapper {
+  padding: 0.2rem;
+  .row {
+    row-gap: 0.5rem;
+    flex-wrap: wrap-reverse;
+    .col-sm-12:first-child {
+      order: 1;
+    }
+    .col-sm-12:last-child {
+      order: 0;
+    }
+  }
+}
+
+.dataTables_length {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.dataTables_filter {
+  display: flex;
+  justify-content: flex-start;
+  label input {
+    margin-right: 0.5rem;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .dataTables_length {
+    justify-content: flex-start;
+  }
+}
